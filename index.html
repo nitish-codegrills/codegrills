@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nitish Srinivas - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <style>
     body {
       background: linear-gradient(to right, #eef2f3, #8e9eab);
@@ -21,6 +21,7 @@
       width: 85%;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      animation: fadeIn 0.8s ease-in;
     }
 
     .section h3 {
@@ -31,7 +32,9 @@
       letter-spacing: 1px;
     }
 
-    .tech-highlight, .tools-highlight {
+    .tech-highlight {
+      background: #fff9e6;
+      border-left: 6px solid #f0ad4e;
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
@@ -39,33 +42,14 @@
       line-height: 1.7em;
     }
 
-    .tech-highlight {
-      background: #fff9e6;
-      border-left: 6px solid #f0ad4e;
-    }
-
     .tools-highlight {
       background: #e9faff;
       border-left: 6px solid #5bc0de;
-    }
-
-    .progress {
-      height: 28px;
+      padding: 20px;
+      border-radius: 10px;
       margin-bottom: 20px;
-      border-radius: 20px;
-      background-color: #f1f1f1;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      line-height: 28px;
-      font-weight: bold;
-      padding-left: 15px;
-    }
-
-    .skill .val {
-      float: right;
-      margin-right: 20px;
+      font-size: 16px;
+      line-height: 1.7em;
     }
 
     @keyframes fadeIn {
@@ -76,92 +60,83 @@
 </head>
 <body>
 
-  <!-- Header Box -->
-  <div style="margin: 20px auto 0; width: 85%; background-color: #0066cc; border-radius: 10px; padding: 10px 20px; color: white; font-size: 15px; font-weight: 500; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-    Srinivas &nbsp; | &nbsp; [80% Backend & 20% Frontend] &nbsp; | &nbsp; Education: BTech (CSE) &nbsp; | &nbsp; University: JNTU[A]
-  </div>
+  <!-- Header -->
+  <header class="container mt-4">
+    <div class="bg-primary text-white rounded p-3 shadow text-center">
+      <h4 class="mb-2">Srinivas</h4>
+      <div>[80% Backend & 20% Frontend]</div>
+      <div>Education: BTech (CSE)</div>
+      <div>University: JNTU[A]</div>
+    </div>
+  </header>
 
-  <!-- Technology Section -->
-  <div class="section">
-    <h3 style="color:#0d6efd; font-weight: bold; font-size: 28px; text-shadow: 1px 1px 2px #ccc;">🚀 Technology Stack</h3>
-    <h4 style="color:#6f42c1;"><u><b>Technologies Used:</b></u></h4>
+  <!-- Technology Stack -->
+  <section class="section">
+    <h3 class="text-primary fw-bold fs-3 text-shadow">🚀 Technology Stack</h3>
+
+    <h4 class="text-purple"><u><b>Technologies Used:</b></u></h4>
     <div class="tech-highlight">
       JAVA/J2EE, JDBC, Servlets, JSP, Struts, Spring IOC, Spring MVC, Spring DAO (Spring JDBC, Hibernate, Spring JPA), Spring REST, Hibernate, Spring Boot, Spring Data JPA, Microservices, JERSEY Rest services, Spring Rest services
     </div>
 
-    <h4 style="color:#5cb85c;"><u><b>Tools Used:</b></u></h4>
+    <h4 class="text-success"><u><b>Tools Used:</b></u></h4>
     <div class="tools-highlight">
       Eclipse, IntelliJ, Maven, Gradle, Git, SVN, ClearCase<br><br>Tomcat, WSO2 server, JBoss, WebLogic, Docker, Jetty, WildFly
     </div>
 
-    <!-- Skillset -->
-    <h3 style="text-align: center; font-size: 24px; color: #0d6efd; margin-bottom: 30px;">Skillset</h3>
+    <!-- Skills -->
+    <h3 class="text-primary fs-4 mt-4">Skillset</h3>
 
     <!-- Skill Bars -->
-    <div style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; color: #333;">
-        <span>Core Java</span><span>80%</span>
-      </div>
-      <div style="background-color: #f5f5f5; height: 6px; border-radius: 4px;">
-        <div style="height: 100%; width: 80%; background-color: #adcbe3;"></div>
+    <div class="mb-3">
+      <label class="d-flex justify-content-between fw-bold">Core Java<span>80%</span></label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 80%"></div>
       </div>
     </div>
 
-    <div style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; color: #333;">
-        <span>Spring</span><span>80%</span>
-      </div>
-      <div style="background-color: #f5f5f5; height: 6px; border-radius: 4px;">
-        <div style="height: 100%; width: 80%; background-color: #adcbe3;"></div>
+    <div class="mb-3">
+      <label class="d-flex justify-content-between fw-bold">Spring<span>80%</span></label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 80%"></div>
       </div>
     </div>
 
-    <div style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; color: #333;">
-        <span>JDBC</span><span>80%</span>
-      </div>
-      <div style="background-color: #f5f5f5; height: 6px; border-radius: 4px;">
-        <div style="height: 100%; width: 80%; background-color: #adcbe3;"></div>
+    <div class="mb-3">
+      <label class="d-flex justify-content-between fw-bold">JDBC<span>80%</span></label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 80%"></div>
       </div>
     </div>
 
-    <div style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; color: #333;">
-        <span>Hibernate</span><span>80%</span>
-      </div>
-      <div style="background-color: #f5f5f5; height: 6px; border-radius: 4px;">
-        <div style="height: 100%; width: 80%; background-color: #adcbe3;"></div>
+    <div class="mb-3">
+      <label class="d-flex justify-content-between fw-bold">Hibernate<span>80%</span></label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 80%"></div>
       </div>
     </div>
 
-    <div style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; color: #333;">
-        <span>Spring Boot</span><span>80%</span>
-      </div>
-      <div style="background-color: #f5f5f5; height: 6px; border-radius: 4px;">
-        <div style="height: 100%; width: 80%; background-color: #adcbe3;"></div>
+    <div class="mb-3">
+      <label class="d-flex justify-content-between fw-bold">Spring Boot<span>80%</span></label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 80%"></div>
       </div>
     </div>
 
-    <div style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; color: #333;">
-        <span>Microservices</span><span>70%</span>
-      </div>
-      <div style="background-color: #f5f5f5; height: 6px; border-radius: 4px;">
-        <div style="height: 100%; width: 70%; background-color: #adcbe3;"></div>
+    <div class="mb-3">
+      <label class="d-flex justify-content-between fw-bold">Microservices<span>70%</span></label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 70%"></div>
       </div>
     </div>
 
-    <div style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; color: #333;">
-        <span>User Interface (UI)</span><span>70%</span>
-      </div>
-      <div style="background-color: #f5f5f5; height: 6px; border-radius: 4px;">
-        <div style="height: 100%; width: 70%; background-color: #adcbe3;"></div>
+    <div class="mb-3">
+      <label class="d-flex justify-content-between fw-bold">User Interface (UI)<span>70%</span></label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 70%"></div>
       </div>
     </div>
-
-  </div>
+  </section>
 
 </body>
 </html>
